@@ -1,3 +1,5 @@
+# coding: utf-8
+
 #Appel des fichiers nécessaire au jeu
 from pygame.locals import *
 from Niveau import *
