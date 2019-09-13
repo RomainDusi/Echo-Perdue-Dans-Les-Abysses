@@ -1,7 +1,7 @@
 # Echo-Perdue-Dans-Les-Abysses
 
 Be sure to have :
-- Python interpreter
+- Python 3.X interpreter
 - Pygame
 
 The main file to lauch the game is "Echo.py".
