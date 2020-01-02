@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'ls'
-                s 'py Echo.py'
+                sh 'py Echo.py'
         }
     }
 }
