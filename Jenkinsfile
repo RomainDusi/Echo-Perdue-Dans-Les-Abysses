@@ -5,12 +5,13 @@ pipeline {
             agent any
             steps {
                 sh 'ls'
+                input 'Is everything OK ?'
             }
         }
         stage('Build') { 
             agent {
                 docker {
-                    image 'python:2-alpine' 
+                    image 'python:latest' 
                 }
             }
             steps {
