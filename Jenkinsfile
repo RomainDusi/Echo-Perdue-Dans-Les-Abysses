@@ -1,11 +1,29 @@
 pipeline {
-    agent any
+    agent none 
     stages {
-        stage('Build') {
+        stage('Test'){
+            agent any
             steps {
                 sh 'ls'
-                sh 'py Echo.py'
             }
+        }
+        stage('Build') { 
+            agent {
+                docker {
+                    image 'python:2-alpine' 
+                }
+            }
+            steps {
+                sh 'python -m py_compile Echo.py' 
+            }
+        }
+    }
+    post {
+        success {
+            echo 'I guess it worked well !'
+        }
+        failure {
+            echo 'Mission failed, will retry later ;('
         }
     }
 }
