@@ -16,6 +16,13 @@ pipeline {
             }
             steps {
                 script {
+                    def dir = new File("path_to_parent_dir")
+                    dir.eachFileRecurse (FileType.FILES) { file ->
+                        list << file
+                    }
+                    list.each {
+                        println it.path
+                    }
                     def MyFile = new File('Echo.py')
                     def FileText = MyFile.text
                     FileText.find("Version")
