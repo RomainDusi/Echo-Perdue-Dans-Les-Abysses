@@ -16,11 +16,8 @@ pipeline {
             }
             steps {
                 script {
-                    sh 'pwd'
-                    sh 'ls'
-                    sh 'ls /Users/romain/.jenkins/workspace/Test_master'
                     sh 'ls /Users/romain/.jenkins/workspace/Test_master/'
-                    def MyFile = new File('Echo.py')
+                    def MyFile = new File('/Users/romain/.jenkins/workspace/Test_master/Echo.py')
                     def FileText = MyFile.text
                     FileText.find("Version")
                 }
