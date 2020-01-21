@@ -19,7 +19,7 @@ pipeline {
                     sh 'ls /Users/romain/.jenkins/workspace/Test_master/'
                     def MyFile = new File('/Users/romain/.jenkins/workspace/Test_master/Echo.py')
                     def FileText = MyFile.text
-                    echo FileText.find("Version")
+                    print (FileText.find("Version"))
                 }
                 sh 'python -m py_compile Echo.py' 
             }
