@@ -5,7 +5,6 @@ pipeline {
             agent any
             steps {
                 sh 'ls'
-                input 'Is everything OK ?'
             }
         }
         stage('Build') { 
@@ -20,10 +19,8 @@ pipeline {
                     def MyFile = new File('/Users/romain/.jenkins/workspace/Test_master/Echo.py')
                     def FileText = MyFile.text
                     print FileText
-                    echo FileText.readLines().get(1)
+                    echo FileText.readLines().find("Version")
                     echo FileText.readLines().get(2)
-                    echo FileText.readLines().get(3)
-                    echo FileText.readLines().get(4)
                 }
                 sh 'python -m py_compile Echo.py' 
             }
