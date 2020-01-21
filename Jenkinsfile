@@ -16,7 +16,7 @@ pipeline {
             }
             steps {
                 script {
-                    def MyFile = new File("Echo.py")
+                    def MyFile = new File('Echo.py')
                     def FileText = MyFile.text
                     FileText.find("Version")
                 }
