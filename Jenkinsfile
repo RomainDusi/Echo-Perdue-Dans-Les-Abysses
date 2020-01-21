@@ -16,6 +16,7 @@ pipeline {
             }
             steps {
                 script {
+                    sh 'pwd'
                     sh 'ls'
                     def MyFile = new File('Echo.py')
                     def FileText = MyFile.text
