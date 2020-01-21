@@ -5,10 +5,7 @@ pipeline {
             agent any
             steps {
                 sh 'ls'
-                def FileVersion = readJSON file: "Echo.py"
-                FileVersion.each { key, value ->
-                    echo "Walked through key $key and value $value"
-                }
+                sh "cat Echo.py"
                 input 'Is everything OK ?'
             }
         }
