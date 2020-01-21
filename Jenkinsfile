@@ -5,9 +5,6 @@ pipeline {
             agent any
             steps {
                 sh 'ls'
-                def MyFile = new File("Echo.py")
-                def FileText = MyFile.text
-                FileText.find("Version")
                 input 'Is everything OK ?'
             }
         }
@@ -18,6 +15,9 @@ pipeline {
                 }
             }
             steps {
+                def MyFile = new File("Echo.py")
+                def FileText = MyFile.text
+                FileText.find("Version")
                 sh 'python -m py_compile Echo.py' 
             }
         }
