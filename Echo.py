@@ -1,6 +1,6 @@
 # coding: utf-8
 
-Version = 1.0.1
+Version = "1.0.1"
 
 #Appel des fichiers nécessaire au jeu
 from pygame.locals import *
