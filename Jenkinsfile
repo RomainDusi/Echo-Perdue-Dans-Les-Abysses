@@ -20,7 +20,7 @@ pipeline {
                     def MyFile = new File('/Users/romain/.jenkins/workspace/Test_master/Echo.py')
                     def FileText = MyFile.text
                     print FileText
-                    print (FileText.find("Version"))
+                    FileText.readLines().get(3)
                 }
                 sh 'python -m py_compile Echo.py' 
             }
