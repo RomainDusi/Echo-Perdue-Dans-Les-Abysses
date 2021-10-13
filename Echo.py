@@ -1,6 +1,6 @@
 # coding: utf-8
 
-Version = "1.0.1"
+Version = "1.0.2"
 
 #Appel des fichiers nécessaire au jeu
 from pygame.locals import *
@@ -24,7 +24,7 @@ continuer = 1
 continuer_jeu_n1 = 1    #Boucles des niveaux
 continuer_jeu_n2 = 0
 continuer_jeu_n3 = 0
-choix = 'n1'		#On définit le niveau à charger
+choix = 'Niveaux/n1'		#On définit le niveau à charger
 restart = 0             #Premier passage dans le jeu
 
 #Boucle du jeu
@@ -78,16 +78,16 @@ while continuer:
                 Objet.play()        #Bruit ramassage de la clé
             morceaucle1 = 1
             #Modification du fichier niveau pour faire disparaitre la clé
-            f = open("n1", "r")                     #Lecture du fichier ( r = read )
+            f = open("Niveaux/n1", "r")                     #Lecture du fichier ( r = read )
             chaine = f.read()
             result = chaine.replace('l', '1')
-            f = open("n1", "w")                     #Ecriture du changement ( w = write )
+            f = open("Niveaux/n1", "w")                     #Ecriture du changement ( w = write )
             f.write(result)
             f.close()
-            f = open("n1", "r")
+            f = open("Niveaux/n1", "r")
             chaine = f.read()
             result2 = chaine.replace('i', '3')
-            f = open("n1", "w")
+            f = open("Niveaux/n1", "w")
             f.write(result2)
             f.close()
             niveau.generer()                         #Regénération du niveau
@@ -100,16 +100,16 @@ while continuer:
                 Objet.play()                #Bruit ramassage de la clé
             morceaucle2 = 1
             #Modification du fichier niveau pour faire disparaitre la clé
-            f = open("n1", "r")                 #Lecture du fichier ( r = read )
+            f = open("Niveaux/n1", "r")                 #Lecture du fichier ( r = read )
             chaine = f.read()
             result = chaine.replace('c', '2')
-            f = open("n1", "w")                 #Ecriture du changement ( w = write )
+            f = open("Niveaux/n1", "w")                 #Ecriture du changement ( w = write )
             f.write(result)
             f.close()
-            f = open("n1", "r")
+            f = open("Niveaux/n1", "r")
             chaine = f.read()
             result2 = chaine.replace('n', '4')
-            f = open("n1", "w")
+            f = open("Niveaux/n1", "w")
             f.write(result2)
             f.close()
             niveau.generer()                    #Regénération du niveau
@@ -121,7 +121,7 @@ while continuer:
             Affichage.texte3(100)       #Affichage de la transition
             continuer_jeu_n1 = 0        #Changement de boucle de niveau
             continuer_jeu_n2 = 1
-            choix = 'n2'                #Définition du niveau à charger
+            choix = 'Niveaux/n2'                #Définition du niveau à charger
             morceaucle1 = 0             #Remise à 0 des variables clé
             morceaucle2 = 0
 
@@ -132,28 +132,28 @@ while continuer:
                             
 
     #Remise à l'origine du fichier du niveau 1 pour le réafficher comme à l'originel lors du prochain lancement
-    f = open("n1", "r")
+    f = open("Niveaux/n1", "r")
     chaine = f.read()
     result = chaine.replace('2', 'c')
-    f = open ("n1", "w")
+    f = open ("Niveaux/n1", "w")
     f.write(result)
     f.close()
-    f = open("n1", "r")
+    f = open("Niveaux/n1", "r")
     chaine = f.read()
     result2 = chaine.replace('1', 'l')
-    f = open ("n1", "w")
+    f = open ("Niveaux/n1", "w")
     f.write(result2)
     f.close()
-    f = open("n1", "r")
+    f = open("Niveaux/n1", "r")
     chaine = f.read()
     result3 = chaine.replace('3', 'i')
-    f = open ("n1", "w")
+    f = open ("Niveaux/n1", "w")
     f.write(result3)
     f.close()
-    f = open("n1", "r")
+    f = open("Niveaux/n1", "r")
     chaine = f.read()
     result4 = chaine.replace('4', 'n')
-    f = open ("n1", "w")
+    f = open ("Niveaux/n1", "w")
     f.write(result4)
     f.close()
 
@@ -189,16 +189,16 @@ while continuer:
             if morceaucle1 == 0 :
                 Objet.play()
             morceaucle1 = 1
-            f = open("n2", "r")
+            f = open("Niveaux/n2", "r")
             chaine = f.read()
             result = chaine.replace('l', '1')
-            f = open("n2", "w")
+            f = open("Niveaux/n2", "w")
             f.write(result)
             f.close()
-            f = open("n2", "r")
+            f = open("Niveaux/n2", "r")
             chaine = f.read()
             result2 = chaine.replace('i', '3')
-            f = open("n2", "w")
+            f = open("Niveaux/n2", "w")
             f.write(result2)
             f.close()
             niveau.generer()                #Regénération du niveau et affichage de celui ci
@@ -210,16 +210,16 @@ while continuer:
             if morceaucle2 == 0 :
                 Objet.play()
             morceaucle2 = 1
-            f = open("n2", "r")
+            f = open("Niveaux/n2", "r")
             chaine = f.read()
             result = chaine.replace('c', '2')
-            f = open("n2", "w")
+            f = open("Niveaux/n2", "w")
             f.write(result)
             f.close()
-            f = open("n2", "r")
+            f = open("Niveaux/n2", "r")
             chaine = f.read()
             result2 = chaine.replace('n', '4')
-            f = open("n2", "w")
+            f = open("Niveaux/n2", "w")
             f.write(result2)
             f.close()
             niveau.generer()                #Regénération du niveau et affichage de celui ci
@@ -229,7 +229,7 @@ while continuer:
         #Victoire -> Retour à l'accueil
         if niveau.structure[echo.case_y][echo.case_x] == 'a' and morceaucle1 == 1 and morceaucle2 == 1:     #Conditions de victoire
             Affichage.texte3(100)       #Affichage de la transition
-            choix = 'n3'                #Choix du niveau
+            choix = 'Niveaux/n3'                #Choix du niveau
             continuer_jeu_n2 = 0        #Changement de variables de niveau
             continuer_jeu_n3 = 1
 
@@ -240,28 +240,28 @@ while continuer:
 
 
     #Remise à l'origine du fichier du niveau 2
-    f = open("n2", "r")
+    f = open("Niveaux/n2", "r")
     chaine = f.read()
     result = chaine.replace('2', 'c')
-    f = open ("n2", "w")
+    f = open ("Niveaux/n2", "w")
     f.write(result)
     f.close()
-    f = open("n2", "r")
+    f = open("Niveaux/n2", "r")
     chaine = f.read()
     result2 = chaine.replace('1', 'l')
-    f = open ("n2", "w")
+    f = open ("Niveaux/n2", "w")
     f.write(result2)
     f.close()
-    f = open("n2", "r")
+    f = open("Niveaux/n2", "r")
     chaine = f.read()
     result3 = chaine.replace('3', 'i')
-    f = open ("n2", "w")
+    f = open ("Niveaux/n2", "w")
     f.write(result3)
     f.close()
-    f = open("n2", "r")
+    f = open("Niveaux/n2", "r")
     chaine = f.read()
     result4 = chaine.replace('4', 'n')
-    f = open ("n2", "w")
+    f = open ("Niveaux/n2", "w")
     f.write(result4)
     f.close()
 
@@ -294,20 +294,20 @@ while continuer:
         pygame.display.flip()
 
         if niveau.structure[echo.case_y][echo.case_x] == 'c':       #Si Echo marche sur le coffre de droite
-            f = open("n3", "r")
+            f = open("Niveaux/n3", "r")
             chaine = f.read()
             result = chaine.replace('1', 'p')
-            f = open("n3", "w")
+            f = open("Niveaux/n3", "w")
             f.write(result)
             f.close()
             niveau.generer()                #Regénération et affichage du niveau
             niveau.afficher3(fenetre)
 
         if niveau.structure[echo.case_y][echo.case_x] == 'k':       #Si Echo marche sur le coffre de droite
-            f = open("n3", "r")
+            f = open("Niveaux/n3", "r")
             chaine = f.read()
             result = chaine.replace('2', 't')
-            f = open("n3", "w")
+            f = open("Niveaux/n3", "w")
             f.write(result)
             f.close()
             niveau.generer()                #Regénération et affichage du niveau
@@ -326,23 +326,23 @@ while continuer:
             Affichage.texte5(100)           #Affichage du message 'Echo s'est perdu et est retournée au début du jeu'
             continuer_jeu_n3 = 0            #Redéfinition des variables de boucles de niveau et relancement du niveau 1
             continuer_jeu_n1 = 1
-            choix = 'n1'                    #Choix du niveau 1
+            choix = 'Niveaux/n1'                    #Choix du niveau 1
             restart = 1                     #Eviter de réafficher l'accueil et l'histoire
                         
 
 
     #Remise à l'origine du fichier du niveau 3
-    f = open("n3", "r")                     
+    f = open("Niveaux/n3", "r")                     
     chaine = f.read()
     result = chaine.replace('p', '1')
-    f = open("n3", "w")
+    f = open("Niveaux/n3", "w")
     f.write(result)
     f.close()
 
-    f = open("n3", "r")
+    f = open("Niveaux/n3", "r")
     chaine = f.read()
     result = chaine.replace('t', '2')
-    f = open("n3", "w")
+    f = open("Niveaux/n3", "w")
     f.write(result)
     f.close()
 

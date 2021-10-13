@@ -59,7 +59,7 @@ text_col = [255, 255, 255]
 fenetre = pygame.display.set_mode((cote_longueur, cote_largeur))
 
 #Musique et sons
-Musique = pygame.mixer.Sound("Musique.wav")
-Objet = pygame.mixer.Sound("Objet.wav")
-Lancement = pygame.mixer.Sound("Lancement.wav")
-Portail = pygame.mixer.Sound("Portail.wav")
+Musique = pygame.mixer.Sound("Sons/Musique.wav")
+Objet = pygame.mixer.Sound("Sons/Objet.wav")
+Lancement = pygame.mixer.Sound("Sons/Lancement.wav")
+Portail = pygame.mixer.Sound("Sons/Portail.wav")

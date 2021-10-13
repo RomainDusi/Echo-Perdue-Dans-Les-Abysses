@@ -12,7 +12,7 @@ class Niveau:
 
 #Génère les niveau
         def generer(self):
-                with open(self.fichier, "r") as fichier:  #j'ouvre le fichier, r= on le lit en temps que variable fichier 
+                with open(self.fichier, "r") as fichier:  #J'ouvre le fichier, r= on le lit en temps que variable fichier 
                         structure_niveau = []            #La structure du niveau 
         #On parcourt les lignes du fichier
                         for ligne in fichier:
