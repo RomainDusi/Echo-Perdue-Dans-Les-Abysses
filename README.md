@@ -2,11 +2,11 @@
 
 ## What is this project ?
 
-Echo Perdue Dans Les Abysses is a python game developped as my computer science project during last year of High School.  
+Echo Perdue Dans Les Abysses is a python game developped as my computer science project during my last year of High School.  
 It is a labyrinth game in which you play Echo, a little girl trapped in a cave.  
 You will have to find your way out by searching for the "hidden" key pieces.
 
-It's a really small and simple game but it could occupy you for a few minutes or could help someone understand how a labyrinth game works.
+It's a really small and simple game but it could keep you occupied for a few minutes or help someone understand how a labyrinthic game works.
 
 ## Requirements and how to install
 
@@ -25,7 +25,7 @@ cd Echo-Perdue-Dans-Les-Abysses
 python Echo.py
 ```
 
-The main file to lauch the game is "Echo.py".
+The main file to launch the game is "Echo.py".
 
 ## Contact
 
